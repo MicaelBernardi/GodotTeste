@@ -4,6 +4,9 @@ const SPEED = 100.0
 const JUMP_VELOCITY = -350.0
 
 @onready var animation := $animation as AnimatedSprite2D
+
+@export var camera_zoom := Vector2(1.5,1.5)
+
 var is_jumping := false
 var ativo: bool = false
 
