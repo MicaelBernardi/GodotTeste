@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3hhdx0xexw6"]
+
+[ext_resource type="Script" uid="uid://dphb1kd8vhgh2" path="res://scripts/GameOver.gd" id="1_r5nmt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oeyri"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[node name="GameOver" type="CanvasLayer"]
+script = ExtResource("1_r5nmt")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1150.0
+offset_bottom = 645.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 480.0
+offset_top = 243.0
+offset_right = 695.0
+offset_bottom = 294.0
+text = "Você foi pego!"
+label_settings = SubResource("LabelSettings_oeyri")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 432.0
+offset_top = 335.0
+offset_right = 586.0
+offset_bottom = 366.0
+scale = Vector2(2, 2)
+text = "Tentar Novamente"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

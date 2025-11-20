@@ -1,3 +1,8 @@
+Timer
+Button
+Label
+ColorRect
+CanvasLayer
 CollisionShape2D
 Area2D
 TileMapLayer
@@ -8,4 +13,3 @@ AnimationPlayer
 Camera2D
 TileMap
 AnimatedSprite2D
-CharacterBody2D

@@ -1,8 +1,11 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1762536653
+::res://::1763667738
 icon.svg::CompressedTexture2D::6755192589274124474::1760650733::1760650747::1::::<><><>0<>0<>d568956e332c509355dba5c6aaca5e42<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://actors/::1762537002
-player.tscn::PackedScene::1889329885410892708::1762536736::0::1::::<><><>0<>0<><>::uid://bc2e5351ewmfo::::res://scripts/player1.gd<>uid://cbawlrcrr626u::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png<>uid://yt1pmmanaxcp::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png<>uid://dut2b71e23vdq::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png
+new_shader_material.gdshader::Shader::4144655911883355345::1763656587::0::1::::<><><>0<>0<><>::
+new_shader_material.tres::ShaderMaterial::4112281021679172057::1762543071::0::1::::<><><>0<>0<><>::uid://b0bx43gpshucf::::res://new_shader_material.gdshader
+::res://actors/::1763662021
+game_over.tscn::PackedScene::198617978163795927::1763661447::0::1::::<><><>0<>0<><>::uid://dphb1kd8vhgh2::::res://scripts/GameOver.gd
+player.tscn::PackedScene::1889329885410892708::1763662021::0::1::::<><><>0<>0<><>::uid://bc2e5351ewmfo::::res://scripts/player1.gd<>uid://cbawlrcrr626u::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png<>uid://yt1pmmanaxcp::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png<>uid://dut2b71e23vdq::::res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png
 player_2.tscn::PackedScene::7996239098929568162::1762536846::0::1::::<><><>0<>0<><>::uid://16g8tgbytdkm::::res://actors/player.tscn
 player_3.tscn::PackedScene::5575692827777581330::1762537002::0::1::::<><><>0<>0<><>::uid://16g8tgbytdkm::::res://actors/player.tscn
 ::res://assets/::1762539725
@@ -13,7 +16,7 @@ gelo.png::CompressedTexture2D::3936780299536129187::1760667988::1760667998::1:::
 ::res://assets/Free Industrial Zone Tileset/::1762539712
 Font.txt::TextFile::-1::1619920847::0::1::::<><><>0<>0<><>::
 license.txt::TextFile::-1::1510123182::0::1::::<><><>0<>0<><>::
-::res://assets/Free Industrial Zone Tileset/1 Tiles/::1621237665
+::res://assets/Free Industrial Zone Tileset/1 Tiles/::1762539728
 IndustrialTile_01.png::CompressedTexture2D::3821465744648695617::1620172432::1762539728::1::::<><><>0<>0<>24334421f6c08967aae1805fd6aa2b16<>res://.godot/imported/IndustrialTile_01.png-3c40b6c6c3022cf76a52f89290b39d4a.ctex::
 IndustrialTile_02.png::CompressedTexture2D::5847749132785015039::1620172432::1762539728::1::::<><><>0<>0<>f384b96f99763515c26e19145951928d<>res://.godot/imported/IndustrialTile_02.png-a868ce96c3791fb25059b52a5ed360e7.ctex::
 IndustrialTile_03.png::CompressedTexture2D::3241783636166990584::1620172432::1762539728::1::::<><><>0<>0<>f4e1d30e96a6cb145f99d147db2860c1<>res://.godot/imported/IndustrialTile_03.png-0f71edae7770a58dcd29d130a4b71c5a.ctex::
@@ -95,14 +98,14 @@ IndustrialTile_78.png::CompressedTexture2D::1560213226459957585::1620172433::176
 IndustrialTile_79.png::CompressedTexture2D::2690233101652914551::1620172433::1762539728::1::::<><><>0<>0<>57eabbd62e5146eb4843e58ae8fa9418<>res://.godot/imported/IndustrialTile_79.png-bf8296ee80095dab887f0054231bb546.ctex::
 IndustrialTile_80.png::CompressedTexture2D::3754677915220212645::1620172433::1762539728::1::::<><><>0<>0<>3b1fd418dcaa76fd7f1fbbb2ed3a4f17<>res://.godot/imported/IndustrialTile_80.png-f0507b98ffa43b812637be1538375380.ctex::
 IndustrialTile_81.png::CompressedTexture2D::1737157301045423507::1620172433::1762539728::1::::<><><>0<>0<>55ebc316ee0274c5e8df79b13912d6df<>res://.godot/imported/IndustrialTile_81.png-d956a206fb41e91deb37c8ffe8c984dd.ctex::
-::res://assets/Free Industrial Zone Tileset/2 Background/::1621237665
+::res://assets/Free Industrial Zone Tileset/2 Background/::1762539728
 1.png::CompressedTexture2D::2732121047751147279::1620127041::1762539728::1::::<><><>0<>0<>4f7b4b4d64430fd013a522378522677f<>res://.godot/imported/1.png-101d718aa40578d9382412499b9807ec.ctex::
 2.png::CompressedTexture2D::3574818608661503493::1620127058::1762539728::1::::<><><>0<>0<>0482f00518b7d738502c9283ca25a91d<>res://.godot/imported/2.png-7685af53e6836fc46e6295fb0fefefb1.ctex::
 3.png::CompressedTexture2D::3961390857515769467::1620127063::1762539728::1::::<><><>0<>0<>361f145837d678e4d2f9f3acf604b91b<>res://.godot/imported/3.png-82ad30ffec7fe9f90426b7c7329efdee.ctex::
 4.png::CompressedTexture2D::1300044331120127451::1620127069::1762539728::1::::<><><>0<>0<>aa16c9aa169c10f896e8524a8bd17f50<>res://.godot/imported/4.png-d0fea432f32a99c22688983b2dba7ae6.ctex::
 5.png::CompressedTexture2D::4652766681147539360::1620127076::1762539728::1::::<><><>0<>0<>32d301983fb965afd59b4ee5dda11161<>res://.godot/imported/5.png-d54d8604527680724e5567e8bd947f7e.ctex::
 Background.png::CompressedTexture2D::7735337154868769830::1620127084::1762539728::1::::<><><>0<>0<>185a785136313690749f31c63741f0d0<>res://.godot/imported/Background.png-6ba2d2c9efcf0c8cdc2cd363ec0e577a.ctex::
-::res://assets/Free Industrial Zone Tileset/3 Objects/::1621237666
+::res://assets/Free Industrial Zone Tileset/3 Objects/::1762539728
 0.png::CompressedTexture2D::5769071645392353234::1620242432::1762539728::1::::<><><>0<>0<>2d774b4527dfdb2d60e31f242464a5d0<>res://.godot/imported/0.png-61bd1b96f3940d67fb8426aea1461acf.ctex::
 1.png::CompressedTexture2D::1985590967398312277::1620242298::1762539728::1::::<><><>0<>0<>15f181ced26e932684ad468ac2fb1e9d<>res://.godot/imported/1.png-8f1fdf99f495a6a574f8ea5dbc847560.ctex::
 2.png::CompressedTexture2D::8479359859454350769::1620242391::1762539728::1::::<><><>0<>0<>12177473e10b2205bb4f0d7895e1113d<>res://.godot/imported/2.png-04654e0f0ac96ae47e5918b2b556df74.ctex::
@@ -147,7 +150,7 @@ Locker4.png::CompressedTexture2D::5670219702537515934::1620242126::1762539728::1
 Mop.png::CompressedTexture2D::6563576843460731382::1620242247::1762539728::1::::<><><>0<>0<>52025cb81ef6913b287157b91680893f<>res://.godot/imported/Mop.png-227e3d596f83fc0bac2d5ff136d0124c.ctex::
 Pointer1.png::CompressedTexture2D::1691263944926185779::1620241972::1762539728::1::::<><><>0<>0<>afd65dbdc387ae66e0ff4a9e4f5879be<>res://.godot/imported/Pointer1.png-dc72d7955c5f81494a383452eb6e9808.ctex::
 Pointer2.png::CompressedTexture2D::595257340964288884::1620241987::1762539728::1::::<><><>0<>0<>8c12a34132eaeca63123f62f94536f18<>res://.godot/imported/Pointer2.png-050f5ceae4684907e912c2cb3cb3c23a.ctex::
-::res://assets/Free Industrial Zone Tileset/4 Animated objects/::1621237666
+::res://assets/Free Industrial Zone Tileset/4 Animated objects/::1762539728
 Card.png::CompressedTexture2D::4469735827256962183::1620216836::1762539728::1::::<><><>0<>0<>65728c0ace3e7f954d7dd230056b8410<>res://.godot/imported/Card.png-86da2e2424d6e17412f99f5350c148d9.ctex::
 Chest.png::CompressedTexture2D::7252835523684332363::1620216904::1762539728::1::::<><><>0<>0<>f0dc2c0d58e2605764127f608315686b<>res://.godot/imported/Chest.png-d6053cb8537d14f1064d5fbd2fcd68cb.ctex::
 Entry.png::CompressedTexture2D::8489859357098620767::1620216887::1762539728::1::::<><><>0<>0<>83d7b111003e69bdb5354251331c6161<>res://.godot/imported/Entry.png-b366308e5af34dac6cb2a563692d8de1.ctex::
@@ -257,11 +260,13 @@ Claw_Animations (16 x 16).png::CompressedTexture2D::6154546479708399064::1592409
 Hurt (32 x 32).png::CompressedTexture2D::3983629749137425444::1592409916::1760650973::1::::<><><>0<>0<>ce2fa603696ec6771789662482211635<>res://.godot/imported/Hurt (32 x 32).png-ec01f85523b5315b4fa70b38f7e49a40.ctex::
 Movement_(Flip_image_back_and_forth) (32 x 32).png::CompressedTexture2D::5752106983385662320::1592409578::1760650973::1::::<><><>0<>0<>eb98b3709ecc84f3d97f33a412e1b335<>res://.godot/imported/Movement_(Flip_image_back_and_forth) (32 x 32).png-b4adaea8b22c876144530f65f0a6c334.ctex::
 Reaching_to_Pinch (32 x 32).png::CompressedTexture2D::1790050723992966372::1592409764::1760650973::1::::<><><>0<>0<>1928b2ed4d56009deb2b067b6c829e2c<>res://.godot/imported/Reaching_to_Pinch (32 x 32).png-27ce10f3cbacae68ecd8597dbf02cbfc.ctex::
-::res://levels/::1762537079
-world_01.tscn::PackedScene::4952525344475795415::1762537079::0::1::::<><><>0<>0<><>::uid://b5qffg6wmhnc0::::res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png<>uid://cqbajvr8ksvf8::::res://scripts/world_01.gd<>uid://cj5qfwe60wtx7::::res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png<>uid://16g8tgbytdkm::::res://actors/player.tscn<>uid://bwdagw83mf4d8::::res://assets/dougras/gelo.png<>uid://c632glsraj6oo::::res://assets/dougras/botao.png<>uid://tul3m1w0xmfx::::res://scripts/caixa.gd<>uid://qopjy3a16pj::::res://assets/dougras/caixa.png<>uid://n73a3s265hku::::res://scripts/player2.gd<>uid://dl6o5iqsn78ti::::res://actors/player_2.tscn<>uid://clo531jgpvy2e::::res://actors/player_3.tscn<>uid://gywggly32jg8::::res://scripts/player3.gd
-::res://scripts/::1762537183
+::res://levels/::1763662669
+world_01.tscn::PackedScene::4952525344475795415::1763662669::0::1::::<><><>0<>0<><>::uid://b5qffg6wmhnc0::::res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png<>uid://cqbajvr8ksvf8::::res://scripts/world_01.gd<>uid://cj5qfwe60wtx7::::res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png<>uid://16g8tgbytdkm::::res://actors/player.tscn<>uid://bwdagw83mf4d8::::res://assets/dougras/gelo.png<>uid://blb3x6dn5638t::::res://assets/Free Industrial Zone Tileset/1 Tiles/IndustrialTile_70.png<>uid://b0bx43gpshucf::::res://new_shader_material.gdshader<>uid://ew2jx85jafty::::res://assets/Free Industrial Zone Tileset/1 Tiles/IndustrialTile_61.png<>uid://c632glsraj6oo::::res://assets/dougras/botao.png<>uid://tul3m1w0xmfx::::res://scripts/caixa.gd<>uid://qopjy3a16pj::::res://assets/dougras/caixa.png<>uid://n73a3s265hku::::res://scripts/player2.gd<>uid://dl6o5iqsn78ti::::res://actors/player_2.tscn<>uid://clo531jgpvy2e::::res://actors/player_3.tscn<>uid://gywggly32jg8::::res://scripts/player3.gd
+::res://scripts/::1763662669
 caixa.gd::GDScript::1375594144832601337::1762537169::0::1::::<>RigidBody2D<><>0<>0<><>::
-player1.gd::GDScript::2582834530302474136::1762537169::0::1::::<>CharacterBody2D<><>0<>0<><>::
+GameManager.gd::GDScript::4878983251566852308::1763661424::0::1::::<>Node<><>0<>0<><>::
+GameOver.gd::GDScript::8226653028958130185::1763661447::0::1::::<>CanvasLayer<><>0<>0<><>::
+player1.gd::GDScript::2582834530302474136::1763662669::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player2.gd::GDScript::980216630951448772::1762537183::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player3.gd::GDScript::472024949791809385::1762537183::0::1::::<>CharacterBody2D<><>0<>0<><>::
 static_body_2d.gd::GDScript::5995753656048254857::1760663617::0::1::::<>RefCounted<><>0<>0<><>::

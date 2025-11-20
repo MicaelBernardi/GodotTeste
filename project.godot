@@ -15,6 +15,10 @@ run/main_scene="uid://cctbmsnkhhuvv"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://scripts/GameManager.gd"
+
 [editor]
 
 movie_writer/movie_file="C:/Users/Microsoft User/Documents/teste-1/teste.avi"

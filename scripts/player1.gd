@@ -8,8 +8,12 @@ const JUMP_VELOCITY = -350.0
 var is_jumping := false
 var ativo := false
 var in_tube := false  # novo controle
+var bodies
 
 func _physics_process(delta: float) -> void:
+	
+	bodies = $"../camera".get_overlapping_bodies()
+	
 	if not in_tube:
 		# movimento de plataforma normal
 		if not is_on_floor():
@@ -81,3 +85,13 @@ func _on_tubo_body_entered(body: Node2D) -> void:
 func _on_tubo_body_exited(body: Node2D) -> void:
 	if body.name == "player1":
 		body.in_tube = false
+
+
+func die():
+	GameManager.game_over()
+
+
+func _on_camera_body_entered(body: Node2D) -> void:
+	await get_tree().create_timer(5.0).timeout
+	if body in bodies:
+		die()
