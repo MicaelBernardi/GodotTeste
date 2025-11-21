@@ -47,17 +47,12 @@ collision_mask = 0
 script = ExtResource("1_8yred")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(69, 97)
+position = Vector2(9, 21)
 shape = SubResource("CapsuleShape2D_8yred")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(69, 93)
+position = Vector2(9, 17)
 sprite_frames = SubResource("SpriteFrames_5fif6")
 animation = &"run "
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2(76, 89)
-target_position = Vector2(20, 20)
-collision_mask = 2

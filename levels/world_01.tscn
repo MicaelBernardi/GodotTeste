@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://cctbmsnkhhuvv"]
+[gd_scene load_steps=33 format=4 uid="uid://cctbmsnkhhuvv"]
 
 [ext_resource type="Texture2D" uid="uid://b5qffg6wmhnc0" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_naeyk"]
 [ext_resource type="Script" uid="uid://cqbajvr8ksvf8" path="res://scripts/world_01.gd" id="1_or7x1"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://ew2jx85jafty" path="res://assets/Free Industrial Zone Tileset/1 Tiles/IndustrialTile_61.png" id="5_dgy4p"]
 [ext_resource type="Texture2D" uid="uid://c632glsraj6oo" path="res://assets/dougras/botao.png" id="5_fwd2m"]
 [ext_resource type="Script" uid="uid://tul3m1w0xmfx" path="res://scripts/caixa.gd" id="6_j8rs1"]
+[ext_resource type="Texture2D" uid="uid://dikb1l4yaqnqp" path="res://assets/Free Industrial Zone Tileset/3 Objects/Box1.png" id="7_gin1p"]
 [ext_resource type="Texture2D" uid="uid://qopjy3a16pj" path="res://assets/dougras/caixa.png" id="7_or7x1"]
 [ext_resource type="Script" uid="uid://n73a3s265hku" path="res://scripts/player2.gd" id="9_0heyt"]
 [ext_resource type="PackedScene" uid="uid://dl6o5iqsn78ti" path="res://actors/player_2.tscn" id="9_tii1u"]
@@ -163,6 +164,22 @@ sources/1 = SubResource("TileSetAtlasSource_athp7")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dgy4p"]
 size = Vector2(64, 30)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dl4q8"]
+texture = ExtResource("7_gin1p")
+0:0/0 = 0
+0:0/0/custom_data_0 = true
+1:0/0 = 0
+1:0/0/custom_data_0 = true
+0:1/0 = 0
+0:1/0/custom_data_0 = true
+1:1/0 = 0
+1:1/0/custom_data_0 = true
+
+[sub_resource type="TileSet" id="TileSet_8drao"]
+custom_data_layer_0/name = "esconderijo"
+custom_data_layer_0/type = 1
+sources/0 = SubResource("TileSetAtlasSource_dl4q8")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o58wf"]
 size = Vector2(55, 94)
 
@@ -201,6 +218,10 @@ position = Vector2(270, 172)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="level/tubos/tubo"]
 position = Vector2(30, 0)
 shape = SubResource("RectangleShape2D_dgy4p")
+
+[node name="esconderijo" type="TileMapLayer" parent="level"]
+tile_map_data = PackedByteArray("AAAjAAIAAAAAAAAAAAAjAAMAAAAAAAEAAAAkAAIAAAABAAAAAAAkAAMAAAABAAEAAAAbAAIAAAAAAAAAAAAbAAMAAAAAAAEAAAAcAAIAAAABAAAAAAAcAAMAAAABAAEAAAA=")
+tile_set = SubResource("TileSet_8drao")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(827, 182)

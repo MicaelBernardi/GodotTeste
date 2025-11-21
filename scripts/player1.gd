@@ -10,6 +10,13 @@ const DISTANCIA_DETECCAO_TETO := 15.0
 
 @onready var animation: AnimatedSprite2D = $animation
 
+# --- NOVO: Referência para os esconderijos ---
+# Arraste o seu "TileMapLayer" de esconderijos para cá no Inspector
+@onready var layer_esconderijos: TileMapLayer = $"../level/esconderijo"
+
+# --- NOVO: Variável de Estado ---
+var esta_escondido: bool = false
+
 var is_jumping := false
 var ativo := true
 var in_tube := false
@@ -22,7 +29,25 @@ var escalando_teto: bool = false
 
 func _physics_process(delta: float) -> void:
 	if not in_tube:
-		# --- LÓGICA DE GRUDAR NO TETO (SETINHA PRA CIMA) ---
+		
+		# --- NOVO: LÓGICA DE ESCONDER ---
+		# Verifica se apertou CIMA para Entrar ou Sair
+		if Input.is_action_just_pressed("ui_up"):
+			if esta_escondido:
+				_sair_do_esconderijo()
+				return # Impede que ele tente pular ou agarrar teto no mesmo frame
+			else:
+				if _tentar_entrar_esconderijo():
+					return # Se entrou, não faz mais nada
+		
+		# Se estiver escondido, para tudo e não processa física
+		if esta_escondido:
+			velocity = Vector2.ZERO
+			animation.play("idle") # Ou uma animação de "duck/agachar"
+			return
+		# ----------------------------------
+
+		# --- LÓGICA DE GRUDAR NO TETO (Mantida, mas agora no 'else' do esconderijo) ---
 		if Input.is_action_just_pressed("ui_up"):
 			if escalando_teto:
 				escalando_teto = false
@@ -45,7 +70,7 @@ func _physics_process(delta: float) -> void:
 		# --- COMPORTAMENTO DA FÍSICA ---
 		if escalando_teto:
 			velocity.y = -10.0 # Mantém grudado no teto
-			animation.flip_v = false # GARANTE QUE NÃO VIRE DE CABEÇA PRA BAIXO
+			animation.flip_v = false 
 		else:
 			animation.flip_v = false
 			if not is_on_floor():
@@ -103,8 +128,6 @@ func _physics_process(delta: float) -> void:
 					velocity.x = direction * SPEED
 					animation.scale.x = direction
 					
-					# Se estiver escalando o teto, toca animação de correr (ou outra se tiver)
-					# Se não, toca animação normal
 					if escalando_teto:
 						animation.play("run") 
 					elif not is_jumping: 
@@ -139,8 +162,52 @@ func _physics_process(delta: float) -> void:
 		move_and_slide()
 
 # --- FUNÇÕES AUXILIARES ---
+
+# --- NOVO: Funções de Esconderijo ---
+func _tentar_entrar_esconderijo() -> bool:
+	if not layer_esconderijos:
+		print("ERRO: Nó layer_esconderijos não encontrado!")
+		return false
+
+	# 1. Converte a posição global do player para a posição dentro do mapa
+	var posicao_local = layer_esconderijos.to_local(global_position)
+	var coords = layer_esconderijos.local_to_map(posicao_local)
+	
+	print("--------------------------------")
+	print("Player está na coordenada do mapa: ", coords)
+
+	# 2. Tenta pegar os dados do tile nessa coordenada
+	var dados = layer_esconderijos.get_cell_tile_data(coords)
+	
+	if dados:
+		print("Achei um tile aqui!")
+		# Verifica se a flag 'esconderijo' existe e é verdadeira
+		var valor_esconderijo = dados.get_custom_data("esconderijo")
+		print("Valor do Custom Data 'esconderijo': ", valor_esconderijo)
+		
+		if valor_esconderijo == true:
+			print("SUCESSO: É um esconderijo válido!")
+			esta_escondido = true
+			modulate.a = 0.5 
+			return true
+		else:
+			print("FALHA: O tile existe, mas a caixinha 'esconderijo' não está marcada no TileSet.")
+	else:
+		print("FALHA: Não tem nenhum tile nesta coordenada da camada 'esconderijo'.")
+		print("Dica: Verifique se você pintou a caixa no nó correto!")
+	
+	print("--------------------------------")
+	return false
+
+func _sair_do_esconderijo():
+	print("Player: Sai do esconderijo!")
+	esta_escondido = false
+	modulate.a = 1.0 # Volta cor normal
+# ------------------------------------
+
 func _alternar_parede() -> void:
-	var parede = $"../StaticBody2D/parede"
+	# Jeito seguro usando acesso direto se possível ou GetNode
+	var parede = $"../StaticBody2D/parede" # Cuidado com caminhos relativos!
 	var sprite = $"../StaticBody2D/spriteparede"
 	if parede and sprite:
 		var esta_desativada = parede.disabled
