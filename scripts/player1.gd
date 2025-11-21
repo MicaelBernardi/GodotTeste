@@ -3,7 +3,7 @@ extends CharacterBody2D
 # --- MOVIMENTO ---
 const SPEED = 100.0
 const RUN_SPEED = 200.0
-const JUMP_VELOCITY = -350.0
+const JUMP_VELOCITY = -300.0
 const GRAVITY = 900.0
 
 # --- WALL MECHANICS ---

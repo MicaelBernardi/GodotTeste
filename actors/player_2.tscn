@@ -3,3 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://16g8tgbytdkm" path="res://actors/player.tscn" id="1_hktb6"]
 
 [node name="player2" instance=ExtResource("1_hktb6")]
+
+[node name="RayCastRight" parent="." index="5"]
+position = Vector2(0, 0)
