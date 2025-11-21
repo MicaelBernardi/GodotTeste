@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://l4uspw5atcq3"]
+
+[ext_resource type="Script" uid="uid://b36f7ji1b0xkd" path="res://scripts/enemy.gd" id="1_8yred"]
+[ext_resource type="Texture2D" uid="uid://yx3sq333e7ud" path="res://assets/Sprite Pack 2/6 - Robo Totem/Armored_Standing (16 x 32).png" id="2_34jws"]
+[ext_resource type="Texture2D" uid="uid://b0vv38jmobnvb" path="res://assets/Sprite Pack 2/6 - Robo Totem/Armored_Walking (16 x 32).png" id="3_u1dkd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ibfi"]
+size = Vector2(13.359375, 20.625)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jfqd0"]
+atlas = ExtResource("2_34jws")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ievm4"]
+atlas = ExtResource("3_u1dkd")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o0pi2"]
+atlas = ExtResource("3_u1dkd")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5fif6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jfqd0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ievm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o0pi2")
+}],
+"loop": true,
+"name": &"run ",
+"speed": 5.0
+}]
+
+[node name="enemy" type="CharacterBody2D"]
+collision_mask = 0
+script = ExtResource("1_8yred")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(81.32031, 97.3125)
+shape = SubResource("RectangleShape2D_6ibfi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(81, 92)
+sprite_frames = SubResource("SpriteFrames_5fif6")
+animation = &"run "
+frame_progress = 0.5651646
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

@@ -78,14 +78,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kjkj0"]
 size = Vector2(15, 14)
 
-[node name="player1" type="CharacterBody2D"]
+[node name="player1" type="CharacterBody2D" groups=["player"]]
 collision_mask = 2
 script = ExtResource("1_esgq3")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 limit_left = 10
-limit_right = 1150
+limit_right = 2420
 limit_smoothed = true
 position_smoothing_enabled = true
 

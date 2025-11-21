@@ -18,5 +18,5 @@ func _input(_event):
 
 func _set_player_ativo(i):
 	for p in players:
-		p.ativo = false   # todos desativam input
-	players[i].ativo = true  # só este recebe input
+		p.ativo = false   
+	players[i].ativo = true  
